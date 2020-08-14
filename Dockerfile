@@ -23,10 +23,10 @@ RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
  && sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 150M/" /usr/local/etc/php/php.ini \
  && echo 'open_basedir = /var/www/html/:/tmp/' >> /usr/local/etc/php/php.ini
 
-WORKDIR /var/www/html
-
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod a+x /usr/local/bin/entrypoint.sh
+
+VOLUME /var/www/html
 
 EXPOSE 80
 
