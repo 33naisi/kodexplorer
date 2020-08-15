@@ -24,6 +24,7 @@ RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
  && echo 'open_basedir = /var/www/html/:/tmp/' >> /usr/local/etc/php/php.ini
 
 COPY entrypoint.sh /usr/local/bin/
+
 RUN chmod a+x /usr/local/bin/entrypoint.sh
 
 VOLUME /var/www/html
@@ -31,4 +32,5 @@ VOLUME /var/www/html
 EXPOSE 80
 
 ENTRYPOINT ["entrypoint.sh"]
+
 CMD [ "php", "-S", "0000:80", "-t", "/var/www/html" ]
