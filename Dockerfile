@@ -28,7 +28,7 @@ RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod a+x /usr/local/bin/entrypoint.sh
 
-VOLUME /var/www/html/data/
+VOLUME /var/www/html/
 
 EXPOSE 80
 
