@@ -3,7 +3,7 @@ FROM php:7.3.6-zts-alpine
 #下载安装包
 RUN set -x \
  && mkdir -p /usr/src/kodexplorer \
- && curl -o /tmp/kodexplorer.zip http://static.kodcloud.com/update/download/kodexplorer4.40.zip \
+ && curl -o /tmp/kodexplorer.zip http://static.kodcloud.com/update/download/kodexplorer4.45.zip \
  && unzip -d /usr/src/kodexplorer/ /tmp/kodexplorer.zip \
  && rm -rf /tmp/*
 
