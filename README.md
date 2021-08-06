@@ -1,5 +1,5 @@
 # kodexplorer
-## kodexplorer，版本4.45
+## kodexplorer，版本4.46
 
 ### 运行：docker run -d --name kodexplorer --restart always -p 8080:80 -v $your_dir:/var/www/html/data 33naisi/kodexplorer
 
